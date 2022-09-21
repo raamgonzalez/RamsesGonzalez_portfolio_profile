@@ -1,0 +1,246 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;700&display=swap');
+
+
+*{
+    padding: 0;
+    margin: 0;
+    font-size: 20px;
+    font-family: 'Montserrat', sans-serif;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    color: black;
+}
+
+h1{
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+h2{
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+h3{
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+h4{
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+
+
+.wrapper{
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(min(100%,20rem), 1fr));
+    grid-template-rows: 6rem 1fr 6rem;
+}
+
+.wrapper:before{
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-image: url(../media/img/background/background_topografy.svg);
+    background-color: #96C93D;
+    background-position: center center;
+    background-size: cover;
+    opacity: 0.8;
+}
+
+/* HEADER */
+.header{
+    position: relative;
+    width: calc(100vw - 2rem);
+    background-color:white;
+    grid-column: 1 / -1;
+    grid-row: 1 / 2;
+    margin: 0 auto;
+    margin-top: 1rem;
+    border: 2px #555555 solid;
+    border-radius: 1.25rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+.header__title{
+    width: 50%;
+    display: block;
+    margin-left: 1rem;
+}
+.header__h1{
+    display: block;
+    font-size: 1.5rem;
+}
+
+.header__nav{
+    margin: 0 ;
+}
+
+.nav__ul{
+    display: flex;
+    flex-direction: row;
+    padding: 0;
+    margin: 0;
+    gap:0;
+}
+
+/* NECESITO ALINEARLO AL CENTRO */
+.nav__li{
+}
+
+.nav__a{
+    padding: 0 2rem;
+    font-size: 1.8rem;
+    display: inline-block;
+}
+
+/* MAIN */
+.main{
+    /* background-color: brown; */
+    position: relative;
+    grid-column: 1 / -1;
+    grid-row: 2 / 3;
+    width: calc(100vw - 2rem);
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 16rem 1fr 1fr 25rem;
+    grid-template-rows: 16rem 1fr;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    gap: 0.5rem;
+}
+.main__section{
+    border: 2px #858484 solid;
+    border-radius: 1.5rem;
+    /* box-shadow:  5px 5px 10px #b3b3b3,
+                -5px -5px 10px #ffffff2a; */
+}
+.main__sectionimg{
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+    border-radius: 10rem;
+    /* width: 32%; */
+    background-color: #d0cccf2a;
+}
+
+/* .main__figure{
+    background-size: cover;
+
+} */
+
+.main__sectionimg__img{
+    height: 100%;
+    border-radius: 10rem;
+    /* box-shadow:  5px 5px 10px #b3b3b3,
+    -5px -5px 10px #ffffff2a; */
+}
+
+.main__section1{
+    grid-column: 2 / 4;
+    grid-row: 1 / 2;
+    background-color: #71999f17;
+}
+.main__section2{
+    grid-column: 4 / 5;
+    grid-row: 1 / -1;
+    background-color: #e8c1d434;
+}
+
+.article__icons{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(min(100%,10rem), 1fr));
+    grid-auto-rows: auto;
+    gap: 0.5rem;
+    margin: 0rem auto;
+    margin-top: 2rem;
+    text-align: center;
+}
+
+.figure__icons{
+    object-fit: cover;
+}
+
+.figure__icons__img{
+    max-width: 3rem;
+    /* max-width: 1rem;
+    min-width: 0.5rem; */
+}
+
+.main__section3{
+    grid-column: 1 / 4;
+    grid-row: 2 / -1;
+    background-color: #688ac11e;
+}
+
+.main__article{
+    /* width: auto;
+    max-width: 100rem; */
+    /* height: 100%; */
+}
+.article__h2{
+    font-size: clamp(1rem, 1.5rem, 2rem);
+    text-align: left;
+    padding: 1rem;
+}
+.article__p{
+    font-size: clamp(0.8rem , 1.3rem, 1.5rem);
+    text-align: justify;
+    padding: 0 1rem;
+}
+
+/* FOOTER */
+.footer{
+    width: calc(100vw - 2rem);
+    position: relative;
+    background-color:white;
+    border: 2px #555555 solid;
+    grid-column: 1 / -1;
+    grid-row: 3 / 4;
+    margin: 0 auto;
+    margin-bottom: 1rem;
+    border-radius: 1.25rem;
+
+}
+
+.footer__content{
+    height: 100%;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer__socialnetwork{
+}
+.socialnetwork__ul{
+    width: 30%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    text-align: center;
+}
+.socialnetwork__li{
+    display: flex;
+}
+.socialnetwork__a{
+    padding: 0 1rem;
+}
+
+.footer__copyright{
+    width: 30%;
+    text-align: center;
+}
+.copyright__h3{}
+
+
